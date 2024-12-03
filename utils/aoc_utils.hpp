@@ -8,6 +8,7 @@
 #include <sstream>
 #include <functional>
 #include <math.h>
+#include <regex>
 
 template <typename T>
 void print_vec(const std::vector<T> & vec)
