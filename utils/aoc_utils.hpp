@@ -64,6 +64,21 @@ std::vector<std::string> split_space(const std::string& string)
     return result;
 }
 
+std::vector<char> get_char_array(const std::vector<std::string>& lines)
+{
+    std::vector<char> result (lines[0].size()*lines.size());
+
+    for (size_t i = 0; i < lines.size(); i++)
+    {
+        for (size_t j = 0; j < lines[0].size(); j++)
+        {
+            result[i*lines[0].size()+j] = lines[i][j];
+        }
+    }
+
+    return result;
+}
+
 template <typename T>
 struct columns
 {
