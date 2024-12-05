@@ -9,6 +9,7 @@
 #include <functional>
 #include <math.h>
 #include <regex>
+#include <memory>
 
 template <typename T>
 void print_vec(const std::vector<T> & vec)
@@ -77,6 +78,24 @@ std::vector<char> get_char_array(const std::vector<std::string>& lines)
     }
 
     return result;
+}
+
+std::vector<int> extract_int(const std::string& input_line)
+{
+    std::string line = input_line;
+    std::regex number ("\\d+");
+    std::smatch number_match;
+
+    std::vector<int> numbers;
+
+
+    while(std::regex_search(line,number_match,number))
+        {
+            numbers.push_back(stoi(number_match[0]));
+            line = number_match.suffix().str();
+        }
+
+    return numbers;
 }
 
 template <typename T>
