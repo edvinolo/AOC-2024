@@ -98,6 +98,47 @@ std::vector<int> extract_int(const std::string& input_line)
     return numbers;
 }
 
+std::vector<std::vector<int>> extract_int_array(const std::vector<std::string>& lines)
+{
+    std::vector<std::vector<int>> results;
+
+    for (size_t i = 0; i < lines.size(); i++)
+    {
+        results.push_back(extract_int(lines[i]));
+    }
+    return results;
+}
+
+
+std::vector<long> extract_long(const std::string& input_line)
+{
+    std::string line = input_line;
+    std::regex number ("\\d+");
+    std::smatch number_match;
+
+    std::vector<long> numbers;
+
+
+    while(std::regex_search(line,number_match,number))
+        {
+            numbers.push_back(stol(number_match[0]));
+            line = number_match.suffix().str();
+        }
+
+    return numbers;
+}
+
+std::vector<std::vector<long>> extract_long_array(const std::vector<std::string>& lines)
+{
+    std::vector<std::vector<long>> results;
+
+    for (size_t i = 0; i < lines.size(); i++)
+    {
+        results.push_back(extract_long(lines[i]));
+    }
+    return results;
+}
+
 template <typename T>
 struct columns
 {
