@@ -21,6 +21,20 @@ void print_vec(const std::vector<T> & vec)
     }
 };
 
+template <typename T>
+void print_array(const std::vector<std::vector<T>> & arr)
+{
+    std::cout << "\n";
+    for (auto it = arr.begin(); it < arr.end(); it++)
+    {
+        for (auto id = it->begin(); id < it->end(); id++)
+        {
+            std::cout << *id;
+        }
+        std::cout << "\n";
+    }
+};
+
 std::vector<std::string> read_input(const std::string& input)
 {
     std::ifstream file(input);
