@@ -18,11 +18,15 @@
 *.swp
 *.swo
 
-#Ignore all AOC input files (not test cases)
+#Ignore all AOC input files and test cases
 input*.txt
+test*.txt
 
 #Ignore __pycache__ directories
 **/__pycache__/
 
 #Ignore .vscode directory
 **/.vscode/
+
+#Ignore build directory
+**/build/
