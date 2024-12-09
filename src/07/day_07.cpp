@@ -1,4 +1,7 @@
-#include "aoc_utils.hpp"
+#include "day_07.hpp"
+
+namespace day_07
+{
 
 bool is_valid(const std::vector<long>& numbers,long res,size_t i)
 {
@@ -117,14 +120,14 @@ void part_two(std::vector<std::vector<long>>& numbers)
     std::cout << "Part two: " << sum << "\n";
 }
 
-int main()
+void run()
 {
-    std::vector<std::string> lines = read_lines("input_1.txt");
+    std::vector<std::string> lines = read_lines("../input/07/input_1.txt");
 
     std::vector<std::vector<long>> numbers = extract_long_array(lines);
 
     part_one(numbers);
     part_two(numbers);
+}
 
-    return 0;
 }

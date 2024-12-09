@@ -1,5 +1,7 @@
-#include "aoc_utils.hpp"
-#include "merge_sort.hpp"
+#include "day_05.hpp"
+
+namespace day_05
+{
 
 struct page
 {
@@ -162,9 +164,9 @@ void part_two(const std::vector<update>& updates)
     std::cout << "Part two: " << sum << "\n";
 }
 
-int main()
+void run()
 {
-    std::vector<std::string> lines = read_lines("input_1.txt");
+    std::vector<std::string> lines = read_lines("../input/05/input_1.txt");
     std::vector<std::string> rules,updates;
 
     separate_parts(lines,rules,updates);
@@ -175,6 +177,6 @@ int main()
 
     part_one(sorted_updates);
     part_two(fixed_updates);
+}
 
-    return 0;
 }

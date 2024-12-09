@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <stdio.h>
+#include <memory>
 
 template <typename T>
 void top_down_merge(std::vector<T>& b,std::vector<T>& a,size_t begin,size_t middle,size_t end)

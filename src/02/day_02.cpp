@@ -1,4 +1,7 @@
-#include "aoc_utils.hpp"
+#include "day_02.hpp"
+
+namespace day_02
+{
 
 struct report
 {
@@ -58,7 +61,7 @@ void part_one(const std::vector<report>& reports)
         }
     }
 
-    std::cout << "Number of safe reports: " << n_safe << "\n";
+    std::cout << "Part two: " << n_safe << "\n";
 }
 
 void part_two(const std::vector<report>& reports)
@@ -109,16 +112,16 @@ void part_two(const std::vector<report>& reports)
         }
     }
 
-    std::cout << "Number of safe reports: " << n_safe << "\n";
+    std::cout << "Part two: " << n_safe << "\n";
 }
 
-int main()
+void run()
 {
-    std::vector<std::string> lines = read_lines("input_1.txt");
+    std::vector<std::string> lines = read_lines("../input/02/input_1.txt");
 
     std::vector<report> reports = construct_reports(lines);
     part_one(reports);
     part_two(reports);
+}
 
-    return 0;
 }

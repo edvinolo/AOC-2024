@@ -1,13 +1,13 @@
-#include "merge_sort.hpp"
-#include "aoc_utils.hpp"
+#include "day_01.hpp"
+
+namespace day_01
+{
 
 void part_one(const columns<int>& input_cols)
 {
     std::vector<int> diff =  vec_op<int,std::minus<int>>(input_cols.right,input_cols.left);
     int result = abs_sum(diff);
-
-    std::cout << "\n";
-    std::cout << "Result part one: " << result << std::endl;
+    std::cout << "Part one: " << result << std::endl;
 }
 
 int similarity_score(const columns<int>& input_cols)
@@ -31,19 +31,18 @@ int similarity_score(const columns<int>& input_cols)
 void part_two(const columns<int>& input_cols)
 {
     int result = similarity_score(input_cols);
-    std::cout << "\n";
-    std::cout << "Result part two: " << result << std::endl;
+    std::cout << "Part two: " << result << std::endl;
 }
 
-int main()
+void run()
 {
-    columns<int> input_cols = read_col_int("input_1.txt");
+    columns<int> input_cols = read_col_int("../input/01/input_1.txt");
 
     merge_sort(input_cols.left);
     merge_sort(input_cols.right);
 
     part_one(input_cols);
     part_two(input_cols);
+}
 
-    return 0;
 }

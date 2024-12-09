@@ -1,4 +1,7 @@
-#include "aoc_utils.hpp"
+#include "day_03.hpp"
+
+namespace day_03
+{
 
 int find_and_mul(const std::string& input_line)
 {
@@ -113,14 +116,14 @@ void part_two(const std::vector<std::string>& lines)
     std::cout << "Part two: " << sum << "\n";
 }
 
-int main()
+void run()
 {
-    std::vector<std::string> lines = read_lines("input_1.txt");
+    std::vector<std::string> lines = read_lines("../input/03/input_1.txt");
 
     //print_vec(lines);
 
     part_one(lines);
     part_two(lines);
+}
 
-    return 0;
 }

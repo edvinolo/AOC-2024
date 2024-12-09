@@ -1,4 +1,6 @@
-#include "aoc_utils.hpp"
+#include "day_08.hpp"
+namespace day_08
+{
 
 struct node_array
 {
@@ -153,8 +155,6 @@ void part_one(const std::vector<std::string>& map)
         }
     }
 
-    //print_array(nodes.array);
-
     std::cout << "Part one: " << sum << "\n";
 }
 
@@ -178,14 +178,12 @@ void part_two(const std::vector<std::string>& map)
     std::cout << "Part two: " << sum << "\n";
 }
 
-int main()
+void run()
 {
-    std::vector<std::string> lines = read_lines("input_1.txt");
-
-    //print_vec(lines);
+    std::vector<std::string> lines = read_lines("../input/08/input_1.txt");
 
     part_one(lines);
     part_two(lines);
+}
 
-    return 0;
 }

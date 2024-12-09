@@ -1,5 +1,5 @@
-#include "aoc_utils.hpp"
-#include "merge_sort.hpp"
+#include "day_06.hpp"
+namespace day_06{
 
 struct past_visit
 {
@@ -159,7 +159,7 @@ void clear_visits(std::vector<std::vector<bool>>& visited, std::vector<std::vect
 
 void part_one(const std::vector<std::string>& map)
 {
-    int sum = 0;
+    int sum = 1;
 
     std::vector<std::vector<bool>> visited = traverse_map(map);
 
@@ -208,14 +208,14 @@ void part_two(std::vector<std::string>& map)
     std::cout << "Part two: " << sum << "\n";
 }
 
-int main()
+void run()
 {
-    std::vector<std::string> lines = read_lines("input_1.txt");
+    std::vector<std::string> lines = read_lines("../input/06/input_1.txt");
 
     pad_map(lines);
 
     part_one(lines);
     part_two(lines);
+}
 
-    return 0;
 }
