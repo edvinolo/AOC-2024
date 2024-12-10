@@ -1,7 +1,7 @@
 #ifndef DAY_07_HPP
 #define DAY_07_HPP
 
-#include "aoc_utils.hpp"
+#include "../utils/aoc_utils.hpp"
 
 namespace day_07
 {

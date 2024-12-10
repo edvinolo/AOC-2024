@@ -1,8 +1,8 @@
 #ifndef DAY_05_HPP
 #define DAY_05_HPP
 
-#include "aoc_utils.hpp"
-#include "merge_sort.hpp"
+#include "../utils/aoc_utils.hpp"
+#include "../utils/merge_sort.hpp"
 
 namespace day_05
 {

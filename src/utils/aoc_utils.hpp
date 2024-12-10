@@ -48,6 +48,7 @@ std::vector<int> extract_int(const std::string&);
 
 std::vector<std::vector<int>> extract_int_array(const std::vector<std::string>&);
 
+std::vector<std::vector<int>> char_to_int(const std::vector<std::string>&);
 
 std::vector<long> extract_long(const std::string&);
 

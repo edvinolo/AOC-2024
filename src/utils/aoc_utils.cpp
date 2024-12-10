@@ -88,6 +88,23 @@ std::vector<std::vector<int>> extract_int_array(const std::vector<std::string>& 
     return results;
 }
 
+std::vector<std::vector<int>> char_to_int(const std::vector<std::string>& lines)
+{
+    std::vector<std::vector<int>> results (lines.size());
+    std::vector<int> line (lines[0].size());
+
+    for (size_t i = 0; i < lines.size(); i++)
+    {
+        for (size_t j = 0; j < lines[0].size(); j++)
+        {
+            line[j] = (int) lines[i][j] -'0';
+        }
+
+        results[i] = line;
+    }
+
+    return results;
+}
 
 std::vector<long> extract_long(const std::string& input_line)
 {
