@@ -12,5 +12,5 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/utils)
 
 add_library(lib_AOC-2024 SHARED lib_aoc.cpp)
 target_include_directories(lib_AOC-2024 INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
-target_compile_options(lib_AOC-2024 INTERFACE -O3 -g -Wall)
+target_compile_options(lib_AOC-2024 INTERFACE -O3 -g -Wall -march=native)
 target_link_libraries(lib_AOC-2024 lib_01 lib_02 lib_03 lib_04 lib_05 lib_06 lib_07 lib_08 lib_09 lib_10)

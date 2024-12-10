@@ -8,6 +8,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_subdirectory(src)
 
 add_executable(AOC-2024 main.cpp src/lib_aoc.hpp)
-target_compile_options(AOC-2024 PUBLIC -O3 -g -Wall)
-target_link_options(AOC-2024 PUBLIC -O3 -g -Wall -fsanitize=address)
+target_compile_options(AOC-2024 PUBLIC -O3 -g -Wall -march=native)
+target_link_options(AOC-2024 PUBLIC )
 target_link_libraries(AOC-2024 PUBLIC lib_AOC-2024)
