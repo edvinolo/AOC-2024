@@ -9,6 +9,7 @@
 #include "06/day_06.hpp"
 #include "07/day_07.hpp"
 #include "08/day_08.hpp"
+#include "09/day_09.hpp"
 
 void run_single_day(std::string&);
 void run_all();

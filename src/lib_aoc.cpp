@@ -34,6 +34,10 @@ void run_single_day(std::string& day)
     {
         day_08::run();
     }
+    else if (day=="09")
+    {
+        day_09::run();
+    }
 }
 
 void run_all()
@@ -46,4 +50,5 @@ void run_all()
     day_06::run();
     day_07::run();
     day_08::run();
+    day_09::run();
 }
