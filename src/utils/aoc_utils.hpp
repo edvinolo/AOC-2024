@@ -11,6 +11,7 @@
 #include <regex>
 #include <memory>
 #include <filesystem>
+#include <map>
 
 template <typename T>
 void print_vec(const std::vector<T> & vec)
